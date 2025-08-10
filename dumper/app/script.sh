@@ -22,7 +22,9 @@ DUMP_FOLDER="$PROJECT_DIR/dumps/Dump_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$DUMP_FOLDER"
 
 # ログファイル (固定の logs/ ディレクトリに保存)
-LOG_FILE="./dump.log"
+LOG_DIR="$PROJECT_DIR/logs"
+mkdir -p "$LOG_DIR"
+LOG_FILE="$LOG_DIR/dump.log"
 
 # テーブルごとのダンプ処理
 echo "ダンプを開始します (フォルダ: $DUMP_FOLDER)..." | tee -a "$LOG_FILE"
